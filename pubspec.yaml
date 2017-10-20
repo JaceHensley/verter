@@ -1,0 +1,17 @@
+name: verter
+version: 1.0.0
+description: Chrome extension to monitor Vertcoin price
+authors: Jace Hensley <jacehensley@gmail.com>
+homepage: https://github.com/jacehensley/verter
+
+environment:
+  sdk: ^1.24.2
+
+dependencies:
+  over_react: ^1.18.1
+  react: ^3.4.3
+
+transformers:
+- over_react
+- $dart2js:
+    csp: true
