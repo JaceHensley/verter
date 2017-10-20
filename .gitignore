@@ -2,5 +2,6 @@
 
 # Files and directories created by pub
 .packages
+packages
 .pub/
 build/

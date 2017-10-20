@@ -1,6 +1,7 @@
 #!/bin/bash
 
-[ -e src/popup.js ] && rm src/popup.js
+[ -e src/popup.dart.js ] && rm src/popup.dart.js
+[ -e src/event_page.dart.js ] && rm src/event_page.dart.js
 [ -e src/popup.html ] && rm src/popup.html
 [ -e src/popup.css ] && rm src/popup.css
 [ -d src/img/ ] && rm -rf src/img/
@@ -11,6 +12,7 @@ pub get
 pub build web
 
 cp build/web/popup.dart.js src/
+cp build/web/event_page.dart.js src/
 cp build/web/index.html src/popup.html
 cp build/web/popup.css src/
 cp -R build/web/img/ src/img/

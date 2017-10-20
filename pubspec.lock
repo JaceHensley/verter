@@ -37,6 +37,12 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.1"
+  chrome:
+    description:
+      name: chrome
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.9.33"
   cli_util:
     description:
       name: cli_util
