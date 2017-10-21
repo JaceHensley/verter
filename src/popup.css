@@ -1,92 +1,55 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.4.4/spectre.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.4.4/spectre-icons.min.css");
+@import url("https://use.fontawesome.com/68715f2a05.css");
 * {
   box-sizing: border-box;
 }
 
 body {
   width: 250px;
-  min-height: 200px;
-}
-
-.container {
-  text-align: center;
-}
-
-.row {
-  min-height: 20px;
-  padding: 5px;
-}
-
-.row--icons {
-  border-top: 1px #6faa5d solid;
-}
-
-.price {
-  max-width: 75%;
-  overflow: hidden;
-  display: inline-block;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.btn {
-  border: 1px gray solid;
-  cursor: pointer;
-  min-width: 20px;
-  border-radius: 25%;
-  padding-top: 2px;
-  background-color: white;
-}
-
-.float-left {
-  float: left;
-}
-
-.float-right {
-  float: right;
 }
 
 .fa {
-  background-color: white;
+  margin: auto;
+  position: static;
+  display: block;
 }
-
 .fa.fa-2 {
   font-size: 2em;
   padding: 5px;
   cursor: pointer;
 }
-
 .fa-reddit-square {
   color: #ff4500;
 }
-
 .fa-twitter-square {
   color: #1da1f2;
 }
-
-.fa-vertcoin {
+.fa-vert {
   height: 1.2em;
   margin-bottom: -8px;
 }
 
-@keyframes spinner {
-  to {transform: rotate(360deg);}
+.columns {
+  padding-bottom: 5px;
 }
 
-.spinner {
-  position: relative;
+.divider--vert {
+  border-top-color: #6faa5d;
 }
 
-.spinner:before {
-  content: '';
-  box-sizing: border-box;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 40px;
-  height: 40px;
-  margin-left: -20px;
-  border-radius: 50%;
-  border: 2px solid #ccc;
-  border-top-color: #333;
-  animation: spinner .6s linear infinite;
+.btn--vert {
+  border-color: #6faa5d;
+  background: #fff;
+  color: #6faa5d;
+}
+.btn--vert:focus, .btn--vert:hover {
+  background: #639c52;
+  border-color: #5d924c;
+  color: #fff;
+}
+.btn--vert:active, .btn--vert.active {
+  background: #5f954e;
+  border-color: #588b49;
+  color: #fff;
 }

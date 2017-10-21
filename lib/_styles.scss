@@ -1,0 +1,75 @@
+// Import full Spectre source code
+@import url('https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.4.4/spectre.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.4.4/spectre-icons.min.css');
+@import url('https://use.fontawesome.com/68715f2a05.css');
+
+$dark-color: #303030;
+$light-color: #fff;
+$gray-color: lighten($dark-color, 40%);
+$gray-color-dark: darken($gray-color, 25%);
+$gray-color-light: lighten($gray-color, 20%);
+
+$vert-color: #6faa5d;
+$vert-color-dark: darken($vert-color, 3%);
+$vert-color-light: lighten($vert-color, 3%);
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 250px;
+}
+
+.fa {
+  margin: auto;
+  position: static;
+  display: block;
+
+  &.fa-2 {
+    font-size: 2em;
+    padding: 5px;
+    cursor: pointer;
+  }
+
+  &-reddit-square {
+    color: #ff4500;
+  }
+
+  &-twitter-square {
+    color: #1da1f2;
+  }
+
+  &-vert {
+    height: 1.2em;
+    margin-bottom: -8px;
+  }
+}
+
+.columns {
+  padding-bottom: 5px;
+}
+
+.divider--vert {
+  border-top-color: $vert-color;
+}
+
+.btn--vert {
+  border-color: $vert-color;
+  background: $light-color;
+  color: $vert-color;
+
+  &:focus,
+  &:hover {
+    background: darken($vert-color-dark, 2%);
+    border-color: darken($vert-color-dark, 5%);
+    color: $light-color;
+  }
+
+  &:active,
+  &.active {
+    background: darken($vert-color-dark, 4%);
+    border-color: darken($vert-color-dark, 7%);
+    color: $light-color;
+  }
+}

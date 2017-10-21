@@ -3,7 +3,7 @@
 
   "name": "Vertcoin Price Tracker",
   "description": "View Vertcoin price in USD, EUR, BTC, ETH, LTC, ZEC, and Satoshi.",
-  "version": "1.1.0",
+  "version": "1.2.0",
 
   "browser_action": {
     "default_icon": "img/icon.png",

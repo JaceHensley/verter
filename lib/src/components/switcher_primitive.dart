@@ -14,7 +14,10 @@ class SwitcherPrimitiveProps extends UiProps {
 class SwitcherPrimitiveComponent extends UiComponent<SwitcherPrimitiveProps> {
   @override
   render() {
-    return (Dom.div()..addProps(copyUnconsumedDomProps()))(
+    return (Dom.div()
+      ..className = 'columns'
+      ..addProps(copyUnconsumedDomProps())
+    )(
       _renderPrevButton(),
       _renderView(),
       _renderNextButton(),
@@ -22,26 +25,34 @@ class SwitcherPrimitiveComponent extends UiComponent<SwitcherPrimitiveProps> {
   }
 
   ReactElement _renderPrevButton() {
-    return (Dom.button()
-        ..className = 'float-left btn'
+    return (Dom.div()
+      ..className = 'column col-2'
+    )(
+      (Dom.button()
+        ..className = 'btn btn--vert btn-sm btn-block'
         ..onClick = props.onPrevButtonClick
       )(
-        (Dom.i()..className = 'fa fa-chevron-left fa-1')(),
-      );
+        (Dom.i()..className = 'icon icon-arrow-left')(),
+      )
+    );
   }
 
   ReactElement _renderView() {
-    return (Dom.span()..className = 'price')(
+    return (Dom.span()..className = 'column col-8')(
       props.price
     );
   }
 
   ReactElement _renderNextButton() {
-    return (Dom.button()
-      ..className = 'float-right btn'
-      ..onClick = props.onNextButtonClick
+    return (Dom.div()
+      ..className = 'column col-2'
     )(
-      (Dom.i()..className = 'fa fa-chevron-right fa-1')(),
+      (Dom.button()
+        ..className = 'btn btn--vert btn-sm btn-block'
+        ..onClick = props.onNextButtonClick
+      )(
+        (Dom.i()..className = 'icon icon-arrow-right')(),
+      )
     );
   }
 }
