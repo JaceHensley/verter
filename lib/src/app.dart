@@ -18,7 +18,7 @@ class AppComponent extends UiComponent<AppProps> {
     if (props.data == null) return false;
 
     return (Dom.div()..className = 'container')(
-      _renderDayChange(),
+      _renderChanges(),
       _renderFiatPrices(),
       _renderCryptoPrices(),
       _renderDivider(),
@@ -26,10 +26,14 @@ class AppComponent extends UiComponent<AppProps> {
     );
   }
 
-  ReactElement _renderDayChange() {
-    return (Dom.div()..className = 'columns')(
-      (Dom.div()..className = 'column col-8 col-mx-auto text-center')('24hr Δ: ${props.data.dayChange}%')
-    );
+  ReactElement _renderChanges() {
+    return (Switcher()
+      ..prices = [
+        'Δ ${props.data.dayChange}% (24hr)',
+        'Δ ${props.data.hourChange}% (1hr)',
+        'Δ ${props.data.weekChange}% (7d)',
+      ]
+    )();
   }
 
   ReactElement _renderFiatPrices() {
